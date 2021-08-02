@@ -1,0 +1,112 @@
+{
+	"name": "e.d.i.t.h",
+	"version": "1.0.0",
+	"description": "This Full Open Source Code for E.D.I.T.H Screen Recorder Desktop Application",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"release": "electron-builder --publish always",
+		"server": "nodemon ./server/index.js",
+		"package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/icon.icns --prune=true --out=release-builds",
+		"package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=./src/A.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+		"package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+	},
+	"directories": {
+		"doc": "docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/koushikpuppala/E.D.I.T.H-Screen-Recorder.git"
+	},
+	"keywords": [
+		"Koushikpuppala",
+		"MongoDB",
+		"Express",
+		"React",
+		"Nodejs",
+		"Electron"
+	],
+	"author": "Koushikpuppala <contact@koushikpuppala.live> (http://koushikpuppala.live)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/koushikpuppala/E.D.I.T.H-Screen-Recorder/issues"
+	},
+	"homepage": "https://github.com/koushikpuppala/E.D.I.T.H-Screen-Recorder#readme",
+	"dependencies": {
+		"@ffmpeg-installer/ffmpeg": "^1.1.0",
+		"axios": "^0.21.1",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"electron-squirrel-startup": "^1.0.0",
+		"express": "^4.17.1",
+		"fluent-ffmpeg": "^2.1.2",
+		"googleapis": "^83.0.0",
+		"mongoose": "^5.13.5"
+	},
+	"config": {
+		"forge": {
+			"packagerConfig": {},
+			"makers": [
+				{
+					"name": "@electron-forge/maker-squirrel",
+					"config": {
+						"name": "edith_screen_recorder"
+					}
+				},
+				{
+					"name": "@electron-forge/maker-zip",
+					"platforms": [
+						"darwin"
+					]
+				},
+				{
+					"name": "@electron-forge/maker-deb",
+					"config": {}
+				},
+				{
+					"name": "@electron-forge/maker-rpm",
+					"config": {}
+				}
+			]
+		}
+	},
+	"build": {
+		"appId": "com.koushikpuppala.edith-screen-recorder",
+		"productName": "E.D.I.T.H Screen Recorder",
+		"mac": {
+			"category": "public.app-category.utilities"
+		},
+		"dmg": {
+			"icon": false
+		},
+		"linux": {
+			"target": [
+				"AppImage",
+				"deb",
+				"pacman",
+				"freebsd",
+				"rpm"
+			],
+			"category": "Utilities"
+		},
+		"win": {
+			"target": [
+				"nsis",
+				"portable",
+				"zip"
+			]
+		}
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "^6.0.0-beta.59",
+		"@electron-forge/maker-deb": "^6.0.0-beta.59",
+		"@electron-forge/maker-rpm": "^6.0.0-beta.59",
+		"@electron-forge/maker-squirrel": "^6.0.0-beta.59",
+		"@electron-forge/maker-zip": "^6.0.0-beta.59",
+		"electron": "^13.1.7",
+		"electron-wix-msi": "^3.2.0",
+		"nodemon": "^2.0.12"
+	}
+}

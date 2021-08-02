@@ -1,0 +1,15 @@
+{
+	"Network": {
+		"Host": "The Host Address",
+		"Port": "The Port Number"
+	},
+	"Mongo": {
+		"Uri": "The MongoDB Link",
+		"Database": "The MongoDB Database Name",
+		"Password": "The MongoDB Database Password"
+	},
+	"Google": {
+		"Client_Id": "The Google Project Client Id",
+		"Client_Secret": "The Google Project Client Secret"
+	}
+}
