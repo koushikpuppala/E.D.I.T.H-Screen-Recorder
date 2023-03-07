@@ -100,13 +100,13 @@
 		}
 	},
 	"devDependencies": {
-		"@electron-forge/cli": "^6.0.0-beta.59",
-		"@electron-forge/maker-deb": "^6.0.0-beta.59",
-		"@electron-forge/maker-rpm": "^6.0.0-beta.59",
-		"@electron-forge/maker-squirrel": "^6.0.0-beta.59",
-		"@electron-forge/maker-zip": "^6.0.0-beta.59",
-		"electron": "^13.1.7",
+		"@electron-forge/cli": "^6.0.5",
+		"@electron-forge/maker-deb": "^6.0.5",
+		"@electron-forge/maker-rpm": "^6.0.5",
+		"@electron-forge/maker-squirrel": "^6.0.5",
+		"@electron-forge/maker-zip": "^6.0.5",
+		"electron": "^23.1.2",
 		"electron-wix-msi": "^3.2.0",
-		"nodemon": "^2.0.12"
+		"nodemon": "^2.0.21"
 	}
 }
