@@ -36,7 +36,7 @@
 	"homepage": "https://github.com/koushikpuppala/E.D.I.T.H-Screen-Recorder#readme",
 	"dependencies": {
 		"@ffmpeg-installer/ffmpeg": "^1.1.0",
-		"axios": "^0.21.1",
+		"axios": "^0.21.2",
 		"body-parser": "^1.19.0",
 		"cors": "^2.8.5",
 		"electron-squirrel-startup": "^1.0.0",
